@@ -1,0 +1,16 @@
+dubbo :
+  protocol :
+    port : 20880
+    name  : dubbo
+  application :
+    name : study-provider
+  registry :
+    address : zookeeper://127.0.0.1:2181
+  packageName : com.xujie.service.reference
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+server:
+  port: 8085

@@ -1,0 +1,35 @@
+dubbo :
+  protocol :
+    port : 20880
+    name  : dubbo
+  application :
+    name : study-provider
+  registry :
+    address : zookeeper://127.0.0.1:2181
+  packageName : com.xujie.service
+
+server :
+  port : 8083
+#spring:
+#  datasource:
+#    driver-class-name: oracle.jdbc.driver.OracleDriver
+#    username: xujie
+#    password: xujie
+#    type: com.alibaba.druid.pool.DruidDataSource
+#    url: jdbc:oracle:thin:@127.0.0.1:1521:orcl
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: com.xujie.domian
+#pagehelper分页插件
+pagehelper:
+  helper-dialect: oracle
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: xujie
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://127.0.0.1:3306/study?characterEncoding=utf8
