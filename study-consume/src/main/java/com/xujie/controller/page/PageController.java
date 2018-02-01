@@ -10,9 +10,14 @@ import java.util.Map;
  */
 @Controller
 public class PageController {
-    @RequestMapping("/indexPage")
-    public  String indexPage(Map<String,Object> map){
-        map.put("name","hello");
+
+    @RequestMapping("/indexAction")
+    public  String index(){
         return "index";
+    }
+
+    @RequestMapping("/loginAction")
+    public  String login(){
+        return "login";
     }
 }

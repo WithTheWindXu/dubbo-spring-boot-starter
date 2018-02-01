@@ -25,18 +25,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
-	<modules>
-		<module>study-common</module>
-		<module>study-api</module>
-		<module>study-provider</module>
-		<module>study-consume</module>
-	</modules>
-
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-			<version>${boot.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -61,5 +53,11 @@
 			<artifactId>jackson-module-parameter-names</artifactId>
 		</dependency>
 	</dependencies>
-
+	<modules>
+		<module>study-common</module>
+		<module>study-api</module>
+		<module>study-provider</module>
+		<module>study-consume</module>
+		<module>study-html</module>
+	</modules>
 </project>

@@ -10,7 +10,8 @@ dubbo :
 spring:
   mvc:
     view:
-      prefix: /WEB-INF/jsp/
-      suffix: .jsp
+      prefix: /
+      suffix: .html
 server:
   port: 8085
+
