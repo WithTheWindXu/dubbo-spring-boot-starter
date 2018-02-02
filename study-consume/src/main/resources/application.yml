@@ -6,7 +6,7 @@ dubbo :
     name : study-provider
   registry :
     address : zookeeper://127.0.0.1:2181
-  packageName : com.xujie.service.reference
+  packageName : com.xujie.controller
 spring:
   mvc:
     view:

@@ -18,7 +18,7 @@ server :
 #    type: com.alibaba.druid.pool.DruidDataSource
 #    url: jdbc:oracle:thin:@127.0.0.1:1521:orcl
 mybatis:
-  mapper-locations: classpath:mapping/*.xml
+  mapper-locations: classpath:mapping/*/*.xml
   type-aliases-package: com.xujie.domian
 #pagehelper分页插件
 pagehelper:

@@ -1,9 +1,5 @@
 package com.xujie;
 
-import com.xujie.domian.UserInfo;
-import com.xujie.enums.ResultEnum;
-import com.xujie.exception.BaseException;
-import com.xujie.service.reference.RefService;
 import com.xujie.utils.redis.RedisUtils;
 import com.xujie.utils.result.Result;
 import com.xujie.utils.result.ResultUtitls;
@@ -20,8 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class StudyConsumeApplication {
 	@Autowired
-	private RefService refService;
-	@Autowired
 	private RedisUtils redisUtils;
 
 	public static void main(String[] args) {
@@ -29,13 +23,13 @@ public class StudyConsumeApplication {
 	}
 
 	@RequestMapping("/say")
-	public Result sayHello(UserInfo name) throws Exception{
+	public Result sayHello() throws Exception{
 		redisUtils.set("mykey","你好！");
 		//自己捕获异常
 		/*if(name!=null){
 			throw new BaseException(ResultEnum.UNKONW_ERROR);
 		}*/
 		System.out.println(redisUtils.get("mykey"));
-		return ResultUtitls.success(refService.sayHello(name));
+		return ResultUtitls.success();
 	}
 }
